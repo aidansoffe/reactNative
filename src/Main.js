@@ -17,7 +17,6 @@ export default class Main extends Component {
                     width: '100%'
                 }}>
                     <TouchableOpacity
-                        // style={}
                         onPress={() => this.props.navigation.navigate('Profile')}
                     >
                         <Text> Go to Profile </Text>
