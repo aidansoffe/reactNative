@@ -8,7 +8,7 @@ export default class Home extends Component {
         return (
             <View style={styles.container}>
 
-                <View style={styles.welcome}><Text style={styles.welcomeSize}>Welcome Kiti!</Text></View>
+                <View style={styles.welcome}><Text style={styles.welcomeSize}>Welcome Hooman</Text></View>
                 <View style={styles.instructions}>
                     <TouchableOpacity
                         // style={}
@@ -17,7 +17,7 @@ export default class Home extends Component {
                         <Text> Touch Here </Text>
                     </TouchableOpacity>
                 </View>
-                <View style={styles.blue}><Text style={styles.luckySize}>lucky</Text></View>
+                <View style={styles.blue}><Text style={styles.luckySize}>Here You Are</Text></View>
 
             </View>
         );

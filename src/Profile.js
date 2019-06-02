@@ -6,7 +6,7 @@ export default class Profile extends Component {
     render() {
         return (
           <View>
-              <Text> Gotcha </Text>
+              <Text> Moya Koyoyeva!!  </Text>
               
           </View>  
         )
