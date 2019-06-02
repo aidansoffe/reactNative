@@ -6,12 +6,12 @@ export default class Main extends Component {
         return (
             <View style={{
                 flex:1,
-                backgroundColor: 'yellow'
+                backgroundColor: '#48d1cc'
             }}>
                 <Text> Main screen </Text>
                 <View style={{
                     flex: 1,
-                    backgroundColor: 'purple',
+                    backgroundColor: '#ff69b4',
                     justifyContent: 'center',
                     alignItems: 'center',
                     width: '100%'
