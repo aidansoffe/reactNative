@@ -8,16 +8,22 @@ export default class Home extends Component {
         return (
             <View style={styles.container}>
 
-                <View style={styles.welcome}><Text style={styles.welcomeSize}>Welcome Hooman</Text></View>
+                <View style={styles.welcome}>
+                    <Text style={styles.welcomeSize}>Welcome Hooman</Text>
+                </View>
+
                 <View style={styles.instructions}>
                     <TouchableOpacity
-                        // style={}
+                        style={styles.button}
                         onPress={() => this.props.navigation.navigate('Main')}
                     >
-                        <Text> Touch Here </Text>
+                        <Text>Touch Here</Text>
                     </TouchableOpacity>
                 </View>
-                <View style={styles.blue}><Text style={styles.luckySize}>Here You Are</Text></View>
+
+                <View style={styles.blue}>
+                    <Text style={styles.luckySize}>Here You Are</Text>
+                </View>
 
             </View>
         );
@@ -71,24 +77,10 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'Cochin'
     },
+
     button: {
-        marginTop: 10,
-        paddingTop: 10,
-        paddingBottom: 10,
-        marginLeft: 30,
-        marginRight: 30,
-        backgroundColor: '#fffff0',
-        borderRadius: 30,
-        borderWidth: 10,
-        paddingLeft: 60,
-        paddingRight: 60,
-        borderColor: '#fff'
+        alignItems: 'center',
+        backgroundColor: '#ffffff',
+        padding: 10
     },
-    tapSize: {
-        fontSize: 30,
-        fontFamily: 'Cochin',
-        color: '#ff69b4'
-    }
-
-
 });
