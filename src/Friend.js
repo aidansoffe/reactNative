@@ -11,10 +11,10 @@ export default class Main extends Component {
                 alignItems: 'center',
                 width: '100%'
             }}>
-                <Text style={{ fontSize: 35, color: '#ffffff'}}> Main screen </Text>
+                <Text style={{ fontSize: 35, color: '#ffffff'}}> Latã-ne </Text>
                 <View style={{
                     flex: 1,
-                    fontSize: 50,
+                    fontSize: 80,
                     backgroundColor: 'pink',
                     justifyContent: 'center',
                     alignItems: 'center',
@@ -24,11 +24,11 @@ export default class Main extends Component {
                     style={styles.button}
                         onPress={() => this.props.navigation.navigate('Profile')}
                     >
-                        <Text style={{fontSize: 35, color: '#ffffff'}}> Click </Text>
+                        <Text style={{fontSize: 35, color: '#ffffff'}}> Sa ne sarutam fundul </Text>
                     </TouchableOpacity>
                     <Image
-            source={require('../components/images/emoji.jpeg')}
-            style={{width: 190, height: 190, marginTop: 45}}
+            source={require('../components/images/us.jpeg')}
+            style={{width: 350, height: 350, marginTop: 25}}
           />
                 </View>
             </View>
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     button: {
         alignItems: 'center',
         backgroundColor: '#87ceeb',
-        padding: 20
+        padding: 10
     }
 });
 

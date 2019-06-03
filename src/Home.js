@@ -8,21 +8,21 @@ export default class Home extends Component {
         return (
             <View style={styles.container}>
 
-                <View style={styles.welcome}>
-                    <Text style={styles.welcomeSize}>Welcome Hooman</Text>
+                <View style={styles.first}>
+                    <Text style={styles.firstSize}>Welcome Hooman</Text>
                 </View>
 
-                <View style={styles.instructions}>
+                <View style={styles.second}>
                     <TouchableOpacity
                         style={styles.button}
                         onPress={() => this.props.navigation.navigate('Main')}
                     >
-                        <Text>Touch Here</Text>
+                        <Text style={styles.secondSize}>Click</Text>
                     </TouchableOpacity>
                 </View>
 
-                <View style={styles.blue}>
-                    <Text style={styles.luckySize}>Here You Are</Text>
+                <View style={styles.third}>
+                    <Text style={styles.thirdSize}>Here You Are</Text>
                 </View>
 
             </View>
@@ -36,51 +36,61 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: 20,
-        backgroundColor: 'yellow',
+        // marginTop: 20,
+        // backgroundColor: 'yellow',
     },
-    welcome: {
+    first: {
         flex: 1,
         justifyContent: 'center',
         backgroundColor: 'pink',
         alignItems: 'center',
         width: '100%'
     },
-    instructions: {
+    second: {
         flex: 1,
         backgroundColor: '#87ceeb',
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%'
     },
-    blue: {
+    third: {
         flex: 1,
-        backgroundColor: '#d8bfd8',
+        backgroundColor: 'pink',
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%'
     },
-    luckySize: {
+    firstSize: {
         fontSize: 40,
-        color: '#6a5acd',
         fontWeight: 'bold',
-        fontFamily: 'Cochin'
+        fontFamily: 'Cochin',
+        color: '#ffffff'
     },
-    welcomeSize: {
-        fontSize: 40,
+    secondSize: {
+        color: '#ffffff',
         fontWeight: 'bold',
-        fontFamily: 'Cochin'
-    },
-
-    ByeSize: {
-        fontSize: 40,
-        fontWeight: 'bold',
-        fontFamily: 'Cochin'
+        fontSize: 20
     },
 
+    thirdSize: {
+        fontSize: 40,
+        color: '#ffffff',
+        fontWeight: 'bold',
+        fontFamily: 'Cochin'
+    },
     button: {
         alignItems: 'center',
-        backgroundColor: '#ffffff',
-        padding: 10
-    },
+        backgroundColor: '#ffc0cb',
+        padding: 20
+    }
+   
+
+    // ByeSize: {
+    //     fontSize: 30,
+    //     fontWeight: 'bold',
+    //     fontFamily: 'arial',
+    //     color: 'green'
+    // },
+
+   
 });

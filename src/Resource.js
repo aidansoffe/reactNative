@@ -5,17 +5,17 @@ export default class Resourse extends Component {
   render() {
     return (
       <View>
-        <Text style={styles.Text}> Hi!</Text>
+        <Text style={styles.Text}> Glad you asked!</Text>
         <View style={styles.goBackButton}>
           <TouchableOpacity
             style={styles.button}
-            onPress={() => this.props.navigation.navigate('Home')}
+            onPress={() => this.props.navigation.navigate('Friend')}
           >
-            <Text>Go Back Home</Text>
+            <Text style={{fontSize: 40, color: '#ffffff'}}>Ce Faci Tyrfa!!</Text>
           </TouchableOpacity>
           <Image
-            source={require('../components/images/2.jpeg')}
-            style={{width: 200, height: 200}}
+            source={require('../components/images/222.jpeg')}
+            style={{width: 350, height: 350, marginTop: 20}}
           />
         </View>
       </View>
@@ -25,27 +25,36 @@ export default class Resourse extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-
-    backgroundColor: 'yellow',
+    backgroundColor: 'pink',
   },
   Text: {
+    
     fontSize: 40,
+    color: '#ffffff',
+    justifyContent: 'center',
+    alignItems: 'center',
     fontWeight: 'bold',
-    fontFamily: 'Cochin'
+    fontFamily: 'Cochin',
+    backgroundColor: 'pink',
+    width: '100%',
+    paddingLeft: 35
   },
 
   goBackButton: {
+    
     marginTop: 90,
-    // backgroundColor: 'blue',
+    backgroundColor: '#ffffff',
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%'
   },
   button: {
+    
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: 'pink',
     padding: 10
   }
 });
