@@ -9,20 +9,42 @@ export default class Home extends Component {
             <View style={styles.container}>
 
                 <View style={styles.first}>
-                    <Text style={styles.firstSize}>Welcome Hooman</Text>
+                <TouchableOpacity
+                        style={styles.button1}
+                            onPress={() => this.props.navigation.navigate('Main')}
+                        >
+                            <Text style={ styles.firstSize}> Main </Text>
+                        </TouchableOpacity>
                 </View>
 
                 <View style={styles.second}>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => this.props.navigation.navigate('Main')}
+                        onPress={() => this.props.navigation.navigate('Profile')}
                     >
-                        <Text style={styles.secondSize}>Click</Text>
+                        
+                        <Text style={styles.secondSize}>Profile</Text>
                     </TouchableOpacity>
                 </View>
 
                 <View style={styles.third}>
-                    <Text style={styles.thirdSize}>Here You Are</Text>
+                <TouchableOpacity
+                style={styles.button2}
+                        onPress={() => this.props.navigation.navigate('Resource')}
+                    >
+                        <Text style={styles.thirdSize}>Resource</Text>
+                    </TouchableOpacity>
+
+                    {/* <Text style={styles.thirdSize}>Here You Are</Text> */}
+                </View>
+
+                <View style={styles.fourth}>
+                <TouchableOpacity
+                        style={styles.button3}
+                            onPress={() => this.props.navigation.navigate('Friend')}
+                        >
+                            <Text style={ styles.fourthSize}> Friend </Text>
+                        </TouchableOpacity>
                 </View>
 
             </View>
@@ -60,6 +82,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         width: '100%'
     },
+    fourth: {
+        flex: 1,
+        justifyContent: 'center',
+        backgroundColor: '#87ceeb',
+        alignItems: 'center',
+        width: '100%'
+    },
+
     firstSize: {
         fontSize: 40,
         fontWeight: 'bold',
@@ -67,9 +97,10 @@ const styles = StyleSheet.create({
         color: '#ffffff'
     },
     secondSize: {
-        color: '#ffffff',
+        fontSize: 40,
         fontWeight: 'bold',
-        fontSize: 20
+        fontFamily: 'Cochin',
+        color: '#ffffff'
     },
 
     thirdSize: {
@@ -78,9 +109,31 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         fontFamily: 'Cochin'
     },
+    fourthSize: {
+        fontSize: 40,
+        fontWeight: 'bold',
+        fontFamily: 'Cochin',
+        color: '#ffffff'
+    },
     button: {
         alignItems: 'center',
         backgroundColor: '#ffc0cb',
+        padding: 20
+    },
+
+    button1: {
+        alignItems: 'center',
+        backgroundColor: '#87ceeb',
+        padding: 20
+    },
+    button2: {
+        alignItems: 'center',
+        backgroundColor: '#87ceeb',
+        padding: 20
+    },
+    button3: {
+        alignItems: 'center',
+        backgroundColor: 'pink',
         padding: 20
     }
    

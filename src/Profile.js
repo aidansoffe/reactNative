@@ -7,18 +7,18 @@ export default class Profile extends Component {
         return (
             <View style={Look.container}>
                 <Text style={Look.Text}> Which Koyoyeva is this??  </Text>
-                <View style={Look.goBackButton}>
-                <TouchableOpacity
+                {/* <View style={Look.goBackButton}> */}
+                {/* <TouchableOpacity
                 style={Look.button}
                         onPress={() => this.props.navigation.navigate('Resource')}
                     >
                         <Text style={Look.textSize}>Click to reveal</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                     <Image
             source={require('../components/images/m.jpeg')}
             style={{width: 250, height: 250, marginTop: 25}}
           />
-                </View>
+                {/* </View> */}
 
             </View>
         );
