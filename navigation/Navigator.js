@@ -4,6 +4,7 @@ import Home from '../src/Home';
 import Profile from '../src/Profile';
 import Resource from '../src/Resource';
 import Friend from '../src/Friend';
+import Movie from '../src/Movie';
 
 
 const RootStack = createStackNavigator({
@@ -12,6 +13,7 @@ const RootStack = createStackNavigator({
   Profile: { screen: Profile},
   Resource: { screen: Resource},
   Friend: { screen: Friend},
+  Movie: { screen: Movie},
   
 });
 

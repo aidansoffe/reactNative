@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ActivityIndicator } from 'react-native';
+
 
 
 
 export default class Home extends Component {
+    
+    
     render() {
         return (
             <View style={styles.container}>
@@ -44,6 +47,15 @@ export default class Home extends Component {
                             onPress={() => this.props.navigation.navigate('Friend')}
                         >
                             <Text style={ styles.fourthSize}> Friend </Text>
+                        </TouchableOpacity>
+                </View>
+
+                <View style={styles.fifth}>
+                <TouchableOpacity
+                        style={styles.button4}
+                            onPress={() => this.props.navigation.navigate('Movie')}
+                        >
+                            <Text style={ styles.fifthSize}> Movie </Text>
                         </TouchableOpacity>
                 </View>
 
@@ -89,6 +101,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: '100%'
     },
+    fifth: {
+        flex: 1,
+        justifyContent: 'center',
+        backgroundColor: 'pink',
+        alignItems: 'center',
+        width: '100%'
+    },
 
     firstSize: {
         fontSize: 40,
@@ -115,6 +134,13 @@ const styles = StyleSheet.create({
         fontFamily: 'Cochin',
         color: '#ffffff'
     },
+    fifthSize: {
+        fontSize: 40,
+        fontWeight: 'bold',
+        fontFamily: 'Cochin',
+        color: '#ffffff'
+    },
+         
     button: {
         alignItems: 'center',
         backgroundColor: '#ffc0cb',
@@ -135,15 +161,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: 'pink',
         padding: 20
+    },
+    button4: {
+        alignItems: 'center',
+        backgroundColor: '#87ceeb',
+        padding: 20
     }
    
 
-    // ByeSize: {
-    //     fontSize: 30,
-    //     fontWeight: 'bold',
-    //     fontFamily: 'arial',
-    //     color: 'green'
-    // },
+    
 
    
 });
