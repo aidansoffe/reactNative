@@ -20,12 +20,12 @@ export default class Main extends Component {
                     alignItems: 'center',
                     width: '100%'
                 }}>
-                    <TouchableOpacity
+                    {/* <TouchableOpacity
                     style={styles.button}
-                        onPress={() => this.props.navigation.navigate('Profile')}
+                        onPress={() => this.props.navigation.navigate('')}
                     >
                         <Text style={{fontSize: 35, color: '#ffffff'}}> Sa ne sarutam fundul </Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                     <Image
             source={require('../components/images/us.jpeg')}
             style={{width: 350, height: 350, marginTop: 25}}

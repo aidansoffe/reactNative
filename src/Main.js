@@ -20,12 +20,12 @@ export default class Main extends Component {
                     alignItems: 'center',
                     width: '100%'
                 }}>
-                    <TouchableOpacity
+                    {/* <TouchableOpacity
                     style={styles.button}
                         onPress={() => this.props.navigation.navigate('Profile')}
                     >
                         <Text style={{fontSize: 35, color: '#ffffff'}}> Click </Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                     <Image
             source={require('../components/images/emoji.jpeg')}
             style={{width: 190, height: 190, marginTop: 45}}
@@ -40,11 +40,7 @@ const styles = StyleSheet.create({
     container:{
 
     },
-    button: {
-        alignItems: 'center',
-        backgroundColor: '#87ceeb',
-        padding: 20
-    }
+
 });
 
 
