@@ -40,11 +40,7 @@ const styles = StyleSheet.create({
     container:{
 
     },
-    // button: {
-    //     alignItems: 'center',
-    //     backgroundColor: '#87ceeb',
-    //     padding: 20
-    // }
+
 });
 
 
