@@ -1,52 +1,53 @@
 
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator} from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 
-export default class Weathers extends React.Component {
-  constructor(props){
+export default class Movie extends React.Component {
+  constructor(props) {
     super(props);
-this.state = {
-    isLoading: true,
-    dataSource: null,
-}
-}
-componentDidMount () {
-return fetch('https://facebook.github.io/react-native/movies.json')
-.then ((response) => response.json())
-.then((responseJson) => {
-    this.setState({
-        isLoading: false,
-        dataSource: responseJson.movies,
-    })
+    this.state = {
+      isLoading: true,
+      dataSource: null,
+    }
+  }
+  componentDidMount() {
+    return fetch('https://facebook.github.io/react-native/movies.json')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        this.setState({
+          isLoading: false,
+          dataSource: responseJson.movies,
+        })
 
-})
-.catch((error) => {
-    console.log(error)
-});
-}
+      })
+      .catch((error) => {
+        console.log(error)
+      });
+  }
 
   render() {
-    if (this.state.isLoading){
+    if (this.state.isLoading) {
       return (
         <View style={styles.container}>
           <ActivityIndicator />
-          </View>
+        </View>
       )
     } else {
-let movies = this.state.dataSource.map((val, key) => {
-  return <View key={key}style={styles.item}>
-    <Text>{val.title}</Text>
-    </View>
-});
-    return (
-      <View style={styles.container}>
-      {movies}
+      let movies = this.state.dataSource.map((val, key) => {
+        return <View key={key} style={styles.item}>
+          <Text>{`${val.title} - ${val.releaseYear}`}</Text>
+          {/* <Text>{val.releaseYear}</Text> */}
+        </View>
+      });
+      return (
+        <View style={styles.container}>
+          {movies}
 
-      </View>
-    );
+        </View>
+      );
     }
   }
-  
+
 }
 
 const styles = StyleSheet.create({
@@ -62,7 +63,7 @@ const styles = StyleSheet.create({
     margin: 10,
     alignItems: 'center',
     justifyContent: 'center',
-    borderBottomWidth: 1,
+    borderBottomWidth: 10,
     borderBottomColor: '#eee'
 
   }
