@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, Linking } from 'react-native';
 
 export default class Movie extends React.Component {
   constructor(props) {
@@ -26,6 +26,7 @@ export default class Movie extends React.Component {
   }
 
   render() {
+    console.log('dataResource: ', this.state.dataSource)
     if (this.state.isLoading) {
       return (
         <View style={styles.container}>
@@ -35,7 +36,7 @@ export default class Movie extends React.Component {
     } else {
       let movies = this.state.dataSource.map((val, key) => {
         return <View key={key} style={styles.item}>
-          <Text>{`${val.title} - ${val.releaseYear}`}</Text>
+          <Text>{`${val.title}  " ${val.releaseYear} "`}</Text>
           {/* <Text>{val.releaseYear}</Text> */}
         </View>
       });
